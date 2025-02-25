@@ -34,7 +34,7 @@ function App() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', bgcolor: '#fbfbfd' }}>
       <AppBar position="fixed" sx={{ background: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(20px)', borderBottom: '1px solid', borderColor: 'rgba(0, 0, 0, 0.1)' }}>
-        <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, sm: 4 }, py: 2 }}>
+        <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, sm: 4 }, py: 1 }}>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <Typography variant="h5" sx={{ fontWeight: 600, color: '#1d1d1f', letterSpacing: '-0.02em' }}>
               Ready! Set! Meals!
