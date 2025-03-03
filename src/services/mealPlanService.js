@@ -23,7 +23,7 @@ You MUST follow these rules:
   "sunday": { "breakfast": "meal", "lunch": "meal", "dinner": "meal", "snacks": "snack" }
 }
 
-Ensure meals are appropriate for the location and dietary preferences. Use local cuisine and seasonal ingredients where possible.`;
+Ensure meals are appropriate for the location and dietary preferences. Use local cuisine and seasonal ingredients where possible. ONLY use English language no matter the location. Translate all the meals to English.`;
 
     const response = await cohere.generate({
       prompt,
