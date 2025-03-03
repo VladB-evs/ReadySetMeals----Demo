@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Typography, Paper, Grid, Divider } from '@mui/material';
+import { Box, Typography, Paper, Grid, Divider, Button } from '@mui/material';
+import DownloadIcon from '@mui/icons-material/Download';
+import { generateMealPlanPDF } from '../utils/pdfUtils';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import FreeBreakfastIcon from '@mui/icons-material/FreeBreakfast';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
@@ -29,19 +31,41 @@ const MealPlanDisplay = ({ mealPlan }) => {
 
   return (
     <Box sx={{ width: '100%', mt: 8 }}>
-      <Typography 
-        variant="h3" 
-        sx={{ 
-          mb: 6, 
-          textAlign: 'center',
-          fontWeight: 700,
-          fontSize: { xs: '2rem', md: '2.5rem' },
-          color: '#1d1d1f',
-          letterSpacing: '-0.02em'
-        }}
-      >
-        Your Weekly Meal Plan
-      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 6 }}>
+        <Typography 
+          variant="h3" 
+          sx={{ 
+            mb: 3, 
+            textAlign: 'center',
+            fontWeight: 700,
+            fontSize: { xs: '2rem', md: '2.5rem' },
+            color: '#1d1d1f',
+            letterSpacing: '-0.02em'
+          }}
+        >
+          Your Weekly Meal Plan
+        </Typography>
+        <Button
+          variant="contained"
+          startIcon={<DownloadIcon />}
+          onClick={() => generateMealPlanPDF(mealPlan)}
+          sx={{
+            bgcolor: '#22c55e',
+            color: '#fff',
+            borderRadius: '980px',
+            px: 4,
+            py: 1,
+            textTransform: 'none',
+            fontSize: '0.9375rem',
+            fontWeight: 500,
+            '&:hover': {
+              bgcolor: '#16a34a'
+            }
+          }}
+        >
+          Download Meal Plan
+        </Button>
+      </Box>
       
       <Grid container spacing={3}>
         {daysOfWeek.map((day) => (

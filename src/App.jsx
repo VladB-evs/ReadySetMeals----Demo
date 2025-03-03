@@ -417,7 +417,7 @@ function App() {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 3 }}>
             <Typography sx={{ color: '#86868b', fontSize: '0.8125rem' }}>
-              © 2024 ReadySetMeals. All rights reserved.
+              © 2025 ReadySetMeals. All rights reserved.
             </Typography>
             <Box sx={{ display: 'flex', gap: 6 }}>
               <Link to="/privacy" style={{ color: '#86868b', fontSize: '0.8125rem', textDecoration: 'none' }} className="hover-link">Privacy Policy</Link>
